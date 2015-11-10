@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using AzureBlobCache.Helpers.Models;
 using Umbraco.Core;
@@ -37,8 +33,7 @@ namespace AzureBlobCache.Helpers
 
             var cachePrefix = "AzureBlobCache_";
 
-            var cacheKey = $"{cachePrefix}{cropUrl}";
-
+            var cacheKey = $"{cachePrefix}{cropUrl}";            
 
             if (resolveCdnPath)
             {
