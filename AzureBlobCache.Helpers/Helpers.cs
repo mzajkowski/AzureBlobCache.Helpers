@@ -29,6 +29,8 @@ namespace AzureBlobCache.Helpers
                      bool upScale = true,
                      bool resolveCdnPath = false)
         {
+			if (cropAlias != null) useCropDimensions = true;
+			
             var cropUrl = ImageCropperTemplateExtensions.GetCropUrl(mediaItem, width, height, propertyAlias, cropAlias, quality, imageCropMode, imageCropAnchor, preferFocalPoint, useCropDimensions, cacheBuster, furtherOptions, ratioMode, upScale);
 
             var cachePrefix = "AzureBlobCache_";
